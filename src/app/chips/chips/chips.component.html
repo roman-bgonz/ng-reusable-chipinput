@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="input-container">
+    <ul class="chip-bar">
+      <li class="chip" *ngFor="let item of items; let i = index">
+        <span class="chip-label">{{ item }}</span>
+        <span *ngIf="removable" class="material-icons md-18 remove">Clear</span>
+      </li>
+      <li class="input-field">
+        <input
+          #inputField
+          type="text"
+          name=""
+          id=""
+          class="input"
+          autocomplete="off"
+          [placeholder]="placeholder"
+        />
+      </li>
+    </ul>
+    <div class="action-btn">
+      <span class="material-icons clear ripple"></span>
+    </div>
+  </div>
+  <div class="chip-footer">
+    <span>Enter a comman after each tag</span>
+  </div>
+</div>
